@@ -26,7 +26,8 @@ function mount(route, path) {
   app.use(route, router);
 }
 
-mount("/actions", "./routes/actions");
+mount("/", "./routes/users/register");
+mount("/action", "./routes/users/actions");
 
 let port = process.env.PORT || 3000;
 app.listen(port, function callback() {

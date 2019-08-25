@@ -2,9 +2,7 @@ const MongoClient = require("mongodb").MongoClient;
 const Entity = require("./Entity");
 const { tap, tapReject } = require.main.require("./utils/promiseUtils");
 
-const hardUri =
-  "mongodb://liberti:liberti1@ds223653.mlab.com:23653/chat-database";
-
+const hardUri = "mongodb://hack:challenge1@ds051575.mlab.com:51575/challenge";
 let dbPool = {};
 
 class DB {
@@ -13,10 +11,10 @@ class DB {
     this.urisum = this.uri;
   }
 
-  setNewURI (newUri) {
-    delete dbPool[this.urisum]
-    this.uri = newUri || hardUri
-    this.urisum = this.uri
+  setNewURI(newUri) {
+    delete dbPool[this.urisum];
+    this.uri = newUri || hardUri;
+    this.urisum = this.uri;
   }
 
   getDB() {
@@ -40,7 +38,7 @@ class DB {
 
   getCollection(collectionName) {
     return this.getDB()
-      .then((db) => db.collection(collectionName))
+      .then(db => db.collection(collectionName))
       .then(
         tap.bind(null, arg => console.log("getCollection", Object.keys(arg)))
       )
