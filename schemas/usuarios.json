@@ -1,0 +1,34 @@
+{
+    "title": "User",
+    "type": "object",
+    "properties": {
+      "folio":{
+        "title": "Ciudad del cliente",
+        "type": "string",
+        "minLength": 1
+      },
+      "fullName": {
+        "title": "Nombre completo del cliente",
+        "type": "string",
+        "minLength": 1
+      },
+      "address":{
+        "title": "Direccion del cliente",
+        "type": "string",
+        "minLength": 1
+      },
+      "city":{
+        "title": "Ciudad del cliente",
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "folio",
+      "fullName",
+      "address",
+      "city"
+    ],
+    "additionalProperties": false
+  }
+  

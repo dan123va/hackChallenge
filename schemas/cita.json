@@ -1,0 +1,33 @@
+{
+    "title": "Cita",
+    "type": "object",
+    "properties": {
+      "date":{
+        "title": "Ciudad del cliente",
+        "type": "string",
+        "minLength": 1
+      },
+      "hour": {
+        "title": "Nombre completo del cliente",
+        "type": "string",
+        "minLength": 1
+      },
+      "branchOffice":{
+        "title": "Direccion del cliente",
+        "type": "string",
+        "minLength": 1
+      },
+      "ciudad":{
+        "title": "Ciudad del cliente",
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "folio",
+      "nombreCompleto",
+      "branchOffice"
+    ],
+    "additionalProperties": false
+  }
+  
